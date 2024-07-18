@@ -1,0 +1,92 @@
+html{
+    background-color: aliceblue;
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    margin: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+p{
+    margin: 0 auto;
+}
+body * {
+    border-radius: 25px;
+    background-color: lightgrey;
+    margin: 20px auto;
+    justify-content: center;
+    text-align: center;
+    border: double 5px black;
+}
+canvas{
+    background-image: url('zombiebg.png');
+    background-color: turquoise;
+    display: block;
+    margin: 0 auto;
+    border: 10px solid black;
+    border-radius: 10px;
+}
+li{
+    border: 0;
+}
+a{
+    border: 0;
+    margin: 5px auto;
+    display: flex;
+}
+h3:hover{
+    width: 25%;
+    transition-duration: 400ms;
+}
+.home {
+    width:10%;
+    border: 5px double black;
+    border-radius: 25px;
+}
+.home:hover{
+    width: 15%;
+    transition-duration: 400ms;
+}
+b{
+    border:0;
+}
+td{
+    border:0;
+}
+table{
+    width: 20%;
+    border-radius: 3px;
+}
+h2{
+    width:15%;
+}
+ul{
+    width:45%;
+    list-style: none;
+}
+h3{
+    width:20%;
+}
+h1{
+    width:fit-content;
+    border-radius: 10px;
+}
+form{
+    width:20%;
+}
+form *{
+    margin: 7px auto;
+    border-radius:5px;
+}
+p{
+    width:20%
+}
+div{
+    display :flex ;
+    width :30%;
+}
+div>p{
+    margin: 5px auto;
+}
+small{
+    border: 0;
+}

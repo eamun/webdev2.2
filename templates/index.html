@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zombies</title>
+    <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet" />
+</head>
+
+<body>
+    <h1>Welcome!</h1>
+    <h3>How To Play</h3>
+    <ul>
+        <li>At the start of the game you will need to grab your gun.</li>
+        <li>Use the arrow keys to move around and the space-bar to shoot (after you have gotten the gun).</li>
+        <li>When you get hit by a zombie you lose health and a point off your score per hit,<br> you will slowly regenerate your health over time.</li>
+        <li>When you kill a zombie you gain the amount of points that corresponds to the round # <br> (round 2 you'd get 2
+            points per kill etc.)</li>
+        <li>There are more zombies per round and they get faster as the rounds increase.</li>
+        <li>The game ends if your health reaches 0 or you kill all zombies in round 5,<br> and if you win you get an extra 20 points.</li>
+        <li>(Tip: running around holding the shoot button seems to work pretty well.)</li>
+    </ul>
+    <h3><a href="{{ url_for('register') }}">Register and play here!</a></h3>
+    <h2>Top 20 players</h2>
+    <table>
+        <tr>
+            <th><b>Username</b></th>
+            <th><b>Highscore</b></th>
+        </tr>
+        {% for row in players %}
+        <tr>
+            <td>{{ row['username'] }}</td>
+            <td>{{ row['highscore'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p><small>*Your score wont be stored if you score 0*</small></p>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet" />
+    <script src="{{ url_for('static', filename='game.js') }}" type="module"></script>
+    <title>Zombies</title>
+</head>
+
+<body>
+    <h1>Shooting zombies or something</h1>
+    <p>username: {{ session['username'] }}</p>
+    <canvas width="768" height="480"></canvas>
+    <div>
+    <p id="score"></p><p id="round"></p>
+    </div>
+    <h2><b id="outcome"></b></h2>
+    <a class="home" href="{{ url_for('index') }}">back home</a>
+</body>
+
+</html>

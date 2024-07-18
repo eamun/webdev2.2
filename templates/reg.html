@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet" />
+</head>
+<body>
+    <h1>Register</h1>
+    <p>This username will appear next to your highscore.</p>
+    <form action="" method="POST" novalidate>
+        {{ form.hidden_tag() }}
+        {{ form.username.label }}
+        {{ form.username() }}
+        <br>
+        {% for error in form.username.errors %}
+            {{ error }}
+        {% endfor %}
+        <br>
+        {{ form.submit() }}
+    </form>
+    <a class="home" href="{{ url_for('index') }}">back home</a>
+</body>
+</html>
